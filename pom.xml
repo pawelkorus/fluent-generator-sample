@@ -11,33 +11,39 @@
     <dependencies>
 
         <dependency>
-            <groupId>fluent-generator</groupId>
+            <groupId>com.github.pawelkorus.fluent-generator</groupId>
             <artifactId>fluent-generator-api</artifactId>
-            <version>1.0.0</version>
+            <version>3038683b2c</version>
         </dependency>
 
         <dependency>
-            <groupId>fluent-generator</groupId>
+            <groupId>com.github.pawelkorus.fluent-generator</groupId>
             <artifactId>fluent-generator-lib</artifactId>
-            <version>1.0.0</version>
+            <version>3038683b2c</version>
         </dependency>
 
         <dependency>
-            <groupId>fluent-generator</groupId>
+            <groupId>com.github.pawelkorus.fluent-generator</groupId>
             <artifactId>fluent-generator-supplier</artifactId>
-            <version>1.0.0</version>
+            <version>3038683b2c</version>
         </dependency>
 
         <dependency>
-            <groupId>fluent-generator</groupId>
+            <groupId>com.github.pawelkorus.fluent-generator</groupId>
             <artifactId>fluent-generator-processor</artifactId>
-            <version>1.0.0</version>
+            <version>3038683b2c</version>
         </dependency>
 
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.16.8</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.7.4</version>
         </dependency>
 
     </dependencies>
@@ -59,5 +65,12 @@
             </plugin>
         </plugins>
     </build>
+
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
 
 </project>

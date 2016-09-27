@@ -1,3 +1,4 @@
+import com.fasterxml.jackson.databind.JsonNode;
 import fluentgenerator.lib.core.GeneratorFactory;
 import fluentgenerator.lib.core.reflect.ReflectGeneratorProxyFactory;
 import fluentgenerator.supplier.RandomStringSupplier;
@@ -9,13 +10,13 @@ import model.BookGenerator;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Application {
 
 	public static void main(String[] args) {
 		final GeneratorFactory generatorFactory = new ReflectGeneratorProxyFactory();
 
+		// generating model classes
 		AuthorGenerator authorGenerator = generatorFactory.generatorInstance(AuthorGenerator.class);
 		authorGenerator.firstName(RandomStringSupplier.Builder.create().alphanumeric().length(5).build());
 		authorGenerator.lastName(Suppliers.indexedString("authorLastName"));
@@ -38,6 +39,13 @@ public class Application {
 		books.add(bookGenerator.build());
 
 		System.out.println(books);
+
+		List<JsonNode> bookNodes = new ArrayList<>();
+		bookNodes.add(bookGenerator.build(JsonNode.class));
+		bookNodes.add(bookGenerator.build(JsonNode.class));
+		bookNodes.add(bookGenerator.build(JsonNode.class));
+
+		System.out.println(bookNodes);
 	}
 
 }
