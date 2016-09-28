@@ -3,12 +3,14 @@ import fluentgenerator.lib.core.GeneratorFactory;
 import fluentgenerator.lib.core.reflect.ReflectGeneratorProxyFactory;
 import fluentgenerator.supplier.RandomStringSupplier;
 import fluentgenerator.supplier.Suppliers;
+import generator.GeneratorWithoutModel;
 import model.Author;
 import model.AuthorGenerator;
 import model.Book;
 import model.BookGenerator;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Application {
@@ -46,6 +48,18 @@ public class Application {
 		bookNodes.add(bookGenerator.build(JsonNode.class));
 
 		System.out.println(bookNodes);
+
+		GeneratorWithoutModel generatorWithoutModel = generatorFactory.generatorInstance(GeneratorWithoutModel.class);
+		generatorWithoutModel.stringProperty(Suppliers.oneOf(Arrays.asList("Sample 1", "Sample 2", "Sample 3")));
+		generatorWithoutModel.intProperty(Suppliers.randomInt(10, 20));
+		generatorWithoutModel.floatProperty(2.0f);
+
+		List<JsonNode> nodes = new ArrayList<>();
+		nodes.add(generatorWithoutModel.build());
+		nodes.add(generatorWithoutModel.build());
+		nodes.add(generatorWithoutModel.build());
+
+		System.out.println(nodes);
 	}
 
 }
