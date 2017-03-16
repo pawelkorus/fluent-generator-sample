@@ -1,7 +1,7 @@
 package generator;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import fluentgenerator.lib.core.Generator;
+import fluentgenerator.core.Generator;
 
 import java.util.function.Supplier;
 

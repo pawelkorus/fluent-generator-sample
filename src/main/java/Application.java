@@ -1,5 +1,5 @@
 import com.fasterxml.jackson.databind.JsonNode;
-import fluentgenerator.lib.core.GeneratorFactory;
+import fluentgenerator.core.GeneratorFactory;
 import fluentgenerator.lib.core.reflect.ReflectGeneratorProxyFactory;
 import fluentgenerator.supplier.RandomStringSupplier;
 import fluentgenerator.supplier.Suppliers;
