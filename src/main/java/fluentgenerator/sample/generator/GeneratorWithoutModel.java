@@ -1,4 +1,4 @@
-package generator;
+package fluentgenerator.sample.generator;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import fluentgenerator.core.Generator;

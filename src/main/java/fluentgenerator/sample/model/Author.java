@@ -1,4 +1,4 @@
-package model;
+package fluentgenerator.sample.model;
 
 import fluentgenerator.annotation.FluentGenerator;
 

@@ -1,13 +1,15 @@
+package fluentgenerator.sample;
+
 import com.fasterxml.jackson.databind.JsonNode;
 import fluentgenerator.core.GeneratorFactory;
 import fluentgenerator.lib.core.reflect.ReflectGeneratorProxyFactory;
+import fluentgenerator.sample.generator.GeneratorWithoutModel;
+import fluentgenerator.sample.model.Author;
+import fluentgenerator.sample.model.AuthorGenerator;
+import fluentgenerator.sample.model.Book;
+import fluentgenerator.sample.model.BookGenerator;
 import fluentgenerator.supplier.RandomStringSupplier;
 import fluentgenerator.supplier.Suppliers;
-import generator.GeneratorWithoutModel;
-import model.Author;
-import model.AuthorGenerator;
-import model.Book;
-import model.BookGenerator;
 
 import java.util.ArrayList;
 import java.util.Arrays;
